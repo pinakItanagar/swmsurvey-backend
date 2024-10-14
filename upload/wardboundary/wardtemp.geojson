@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "SELECT",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": null, "description": null, "WRD_ID": "W020", "WRD_NO": "020", "WRD_NAME": "Ward20", "TIME_ST": "17-Apr-2013", "WRD_AREA": 2.26, "SLM_AREA": 6.69, "POP_11": 23146, "TSLM_POP": 9232, "WRD_TFS": 0, "WRD_TPS": 11, "WRD_TPT": 6 }, "geometry": { "type": "Polygon", "coordinates": [ [  ] ] } }
+]
+}

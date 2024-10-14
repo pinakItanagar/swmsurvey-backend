@@ -1,0 +1,52 @@
+[Sat Jan 02 06:25:11.467064 2021] [mpm_prefork:notice] [pid 15651] AH00163: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/3.6 configured -- resuming normal operations
+[Sat Jan 02 06:25:11.467160 2021] [core:notice] [pid 15651] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Jan 02 13:47:19.969664 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] 2021-01-02 13:47:19,958: ERROR\tpgadmin:\t'NoneType' object is not subscriptable
+[Sat Jan 02 13:47:19.969973 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] Traceback (most recent call last):
+[Sat Jan 02 13:47:19.969980 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/__init__.py", line 604, in current_user_cleanup
+[Sat Jan 02 13:47:19.969982 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     mdl.on_logout(user)
+[Sat Jan 02 13:47:19.969985 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/tools/datagrid/__init__.py", line 87, in on_logout
+[Sat Jan 02 13:47:19.969988 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     close_query_tool_session(trans_id)
+[Sat Jan 02 13:47:19.969991 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/tools/datagrid/__init__.py", line 482, in close_query_tool_session
+[Sat Jan 02 13:47:19.969994 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     conn.cancel_transaction(cmd_obj.conn_id, cmd_obj.did)
+[Sat Jan 02 13:47:19.969996 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/connection.py", line 1516, in cancel_transaction
+[Sat Jan 02 13:47:19.970000 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     password = decrypt(password, crypt_key)\\
+[Sat Jan 02 13:47:19.970002 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 59, in decrypt
+[Sat Jan 02 13:47:19.970004 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     cipher = Cipher(AES(pad(key)), CFB8(iv), default_backend())
+[Sat Jan 02 13:47:19.970007 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 71, in pad
+[Sat Jan 02 13:47:19.970009 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     key = key[:32]
+[Sat Jan 02 13:47:19.970015 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] TypeError: 'NoneType' object is not subscriptable
+[Sat Jan 02 13:47:19.970024 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] 
+[Sat Jan 02 13:47:19.980073 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] 2021-01-02 13:47:19,973: ERROR\tpgadmin:\t'NoneType' object is not subscriptable
+[Sat Jan 02 13:47:19.980111 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] Traceback (most recent call last):
+[Sat Jan 02 13:47:19.980116 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/lib/python3/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+[Sat Jan 02 13:47:19.980120 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     rv = self.dispatch_request()
+[Sat Jan 02 13:47:19.980124 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/lib/python3/dist-packages/flask/app.py", line 1598, in dispatch_request
+[Sat Jan 02 13:47:19.980128 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     return self.view_functions[rule.endpoint](**req.view_args)
+[Sat Jan 02 13:47:19.980132 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/lib/python3/dist-packages/flask_security/views.py", line 240, in logout
+[Sat Jan 02 13:47:19.980136 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     logout_user()
+[Sat Jan 02 13:47:19.980140 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/lib/python3/dist-packages/flask_security/utils.py", line 169, in logout_user
+[Sat Jan 02 13:47:19.980145 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     _logout_user()
+[Sat Jan 02 13:47:19.980174 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/lib/python3/dist-packages/flask_login/utils.py", line 171, in logout_user
+[Sat Jan 02 13:47:19.980178 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     user_logged_out.send(current_app._get_current_object(), user=user)
+[Sat Jan 02 13:47:19.980181 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/lib/python3/dist-packages/blinker/base.py", line 267, in send
+[Sat Jan 02 13:47:19.980185 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     for receiver in self.receivers_for(sender)]
+[Sat Jan 02 13:47:19.980189 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/lib/python3/dist-packages/blinker/base.py", line 267, in <listcomp>
+[Sat Jan 02 13:47:19.980192 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     for receiver in self.receivers_for(sender)]
+[Sat Jan 02 13:47:19.980195 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/__init__.py", line 609, in current_user_cleanup
+[Sat Jan 02 13:47:19.980199 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     _driver.gc_own()
+[Sat Jan 02 13:47:19.980202 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/__init__.py", line 240, in gc_own
+[Sat Jan 02 13:47:19.980205 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     mgr.release()
+[Sat Jan 02 13:47:19.980208 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/server_manager.py", line 406, in release
+[Sat Jan 02 13:47:19.980212 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     conn.cancel_transaction(conn.conn_id[5:])
+[Sat Jan 02 13:47:19.980215 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/connection.py", line 1516, in cancel_transaction
+[Sat Jan 02 13:47:19.980219 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     password = decrypt(password, crypt_key)\\
+[Sat Jan 02 13:47:19.980223 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 59, in decrypt
+[Sat Jan 02 13:47:19.980226 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     cipher = Cipher(AES(pad(key)), CFB8(iv), default_backend())
+[Sat Jan 02 13:47:19.980229 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 71, in pad
+[Sat Jan 02 13:47:19.980232 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708]     key = key[:32]
+[Sat Jan 02 13:47:19.980238 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] TypeError: 'NoneType' object is not subscriptable
+[Sat Jan 02 13:47:19.980246 2021] [wsgi:error] [pid 34424] [remote 51.77.150.44:34708] 
+[Sat Jan 02 14:06:55.520562 2021] [php7:error] [pid 41159] [client 185.220.100.254:3500] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 44769280 bytes) in /var/www/html/psc/system/core/Loader.php on line 992, referer: http://164.52.207.234/psc/manageproperty/propertyaudit
+[Sat Jan 02 16:56:36.613051 2021] [php7:error] [pid 44174] [client 45.155.205.108:49198] script '/var/www/html/index.php' not found or unable to stat
+[Sat Jan 02 17:23:31.065910 2021] [php7:error] [pid 42937] [client 122.51.243.251:46398] script '/var/www/html/elrekt.php' not found or unable to stat
+[Sat Jan 02 17:23:32.063155 2021] [php7:error] [pid 43132] [client 122.51.243.251:49704] script '/var/www/html/index.php' not found or unable to stat

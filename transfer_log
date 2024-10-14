@@ -1,0 +1,4 @@
+SELECT count(p_record_id) FROM `property_master_update` WHERE `ward_no` = '62'
+
+
+SELECT `p_record_id`, pid, ward_no, qr_code, owner_name , guardian_name, `houseno`, `address_street`, `area_landmark` , mobile_no , isflat FROM `property_master_update` WHERE qr_code = 'PMC0023061' 

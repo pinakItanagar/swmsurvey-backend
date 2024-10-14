@@ -1,0 +1,512 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap');
+/*-------------------------------------------------------------------------------------------
+  CSS definations for Bordumsahealthca
+-------------------------------------------------------------------------------------------*/
+
+/* RESET */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+        -ms-box-sizing:border-box;
+         -o-box-sizing:border-box;
+            box-sizing:border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a,
+a:hover,
+a:focus {
+    outline:none;
+    text-decoration:none;
+}
+/* Common Tages */
+.padding-right {
+    padding-right:0;
+}
+.padding-left {
+    padding-left:0;
+}
+.btn {
+    display: inline-block;
+    border: none;
+    background: #495677;
+    padding: 10px 20px;
+    letter-spacing: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #fff;
+    color: #495677;
+}
+.btn-default {
+    background: #fff;
+    color: #495677;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-control {
+    border: 1px solid #EBEBEB;
+    background: #fff;
+    height: auto;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 0;
+    line-height: 24px;
+    box-shadow: none;
+}
+select.form-control {
+    height: 44px;
+}
+textarea.form-control {
+    min-height: 120px;
+    border-radius: 3px;
+    resize: none;
+}
+
+/* form-check */
+.form-check {
+    position: relative;
+    display: block;
+}
+.form-check input {
+    display: none;
+}
+.form-check label {
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+.form-check .checkbox-check,
+.form-check .radio-check {
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 5px;
+    position: relative;
+    border-radius: 3px;
+}
+.form-check .radio-check,
+.form-check .radio-check:after {
+    border-radius: 100%;
+}
+.form-check .checkbox-check:after,
+.form-check .radio-check:after {
+    width: 10px;
+    height: 10px;
+    float: left;
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    z-index: 2;
+}
+.form-check input[type='radio']:checked + label .radio-check:after {
+    background: #ccc;
+}
+.form-check input[type='checkbox']:checked + label .checkbox-check:after {
+    background: #ccc;
+}
+
+.container {
+    width: auto;
+    padding: 0 100px;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* SITE STRUCTURE & APPEARANCE */
+/*-------------------------------------------------------------------------------------------*/
+body {
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+}
+
+/* Header */
+.header {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    padding: 5px 0;
+}
+
+/* logo */
+.logo {
+    float: left;
+    padding-right: 15px;
+}
+.logo img {
+    width: auto;
+    height: 60px;
+}
+.logo span {
+    font-size: 14px;
+    color: #677190;
+    font-weight: 700;
+}
+
+/* enquiry */
+.enquiry {
+    padding: 18px 0;
+    float: right;
+    font-weight: 700;
+}
+.enquiry p {
+    line-height: 24px;
+}
+.enquiry img {
+    width: auto;
+    height: 24px;
+    float: left;
+    margin-right: 6px;
+}
+
+/* main-container */
+.main-container {
+    height: calc(100vh - 110px);
+}
+
+/* leftcol */
+.leftcol {
+    background: url(../images/showcase.jpg) no-repeat left center;
+    background-size: cover;
+    width: 65%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+/* caption */
+.caption {
+    background: rgba(0,0,0,0.7);
+    max-width: 93%;
+    max-height: 500px;
+    overflow: auto;
+    padding: 30px;
+    color: #fff;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 2;
+}
+.caption h2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.caption p {
+    line-height: 21px;
+}
+
+/* clients-logo */
+.clients-logo {
+    margin-top: 10px;
+}
+.clients-logo:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+.clients-logo ul {
+    margin: 0 -5px;
+}
+.clients-logo li {
+    width: 20%;
+    float: left;
+    padding: 0 5px;
+}
+.clients-logo li a {
+    background: #fff;
+    display: block;
+    text-align: center;
+}
+.clients-logo li img {
+    width: auto;
+    height: 70px;
+}
+
+/* rightcol */
+.rightcol {
+    background: #677190;
+    width: 35%;
+    height: 100%;
+    float: left;
+    padding: 0 70px;
+}
+
+/* login */
+.login {
+    max-height: 75vh;
+    overflow: auto;
+    padding: 30px;
+    color: #fff;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.login h3 {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: normal;
+}
+.login .forgot-link {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 20px;
+}
+.login .links {
+    color: #fff;
+    text-decoration: underline;
+}
+.login .section-divider {
+    margin-bottom: 18px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.login .section-divider:before {
+    background: #C9C9C9;
+    width: 100%;
+    height: 1px;
+    float: left;
+    margin-top: -1px;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 2;
+}
+.login h5 {
+    background: #677190;
+    margin: 0;
+    display: inline-block;
+    padding: 2px 5px;
+    position: relative;
+    z-index: 3;
+}
+
+/* footer */
+.footer {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+.footer .txtb p {
+    line-height: 18px;
+    margin-bottom: 0;
+}
+
+/* social */
+.social {
+    float: right;
+    font-size: 18px;
+}
+.social li {
+    float: left;
+    margin-left: 15px;
+}
+.social li:first-child {
+    margin-left: 0;
+}
+.social li a {
+    display: block;
+    color: #000;
+    line-height: 18px;
+}
+
+
+/* designdot */
+a.designdot {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #010101;
+    line-height: 17px;
+}
+a.designdot:hover {
+    color: #010101;
+}
+.designdot-link {
+    background: url(../images/designdotlogo.png) no-repeat scroll left top;
+    width: 72px;
+    height: 17px;
+    display: block;
+    float: right;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+.designdot-link:hover {
+    background: url(../images/designdotlogo.png) no-repeat scroll left bottom;
+}
+
+
+
+
+
+.menu-mobile {
+    display: none;
+}
+/*/////////////////////////////////
+  Responsive CSS
+/////////////////////////////////*/
+@media (min-width: 320px) and (max-width: 767px) {
+
+.container {
+    padding: 0 15px;
+}
+
+/* main-container */
+.main-container {
+    height: auto;
+    position: relative;
+}
+.main-container:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.leftcol {
+    width: 100%;
+    height: auto;
+    float: right;
+    padding: 30px 15px;
+}
+.caption {
+    background: rgba(0,0,0,0.7);
+    max-width: 100%;
+    padding: 15px;
+    font-size: 13px;
+    color: #fff;
+    position: static;
+}
+.caption h2 {
+    font-size: 18px;
+}
+.caption p {
+    line-height: 19px;
+}
+.rightcol {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding: 0;
+}
+.login {
+    position: static;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+/* footer */
+.footer .txtb {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.social {
+    text-align: center;
+    float: none;
+}
+.social ul {
+    display: inline-block;
+}
+
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+.container {
+    padding: 0 15px;
+}
+.leftcol {
+    width: 60%;
+}
+.caption {
+    max-width: 85%;
+}
+.rightcol {
+    width: 40%;
+    padding: 0;
+}
+
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.container {
+    padding: 0 15px;
+}
+.leftcol {
+    width: 60%;
+}
+.caption {
+    max-width: 85%;
+}
+.rightcol {
+    width: 40%;
+    padding: 0;
+}
+
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 1700px) and (max-width: 1950px) {
+
+
+
+}
+
+
+
+.inputTextBG {
+  background-color: #3CBC8D;
+  color: white;
+}

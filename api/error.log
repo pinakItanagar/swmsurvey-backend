@@ -1,0 +1,86 @@
+[Tue Dec 29 06:25:06.771823 2020] [mpm_prefork:notice] [pid 15651] AH00163: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/3.6 configured -- resuming normal operations
+[Tue Dec 29 06:25:06.771910 2020] [core:notice] [pid 15651] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Dec 29 10:02:01.128606 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] 2020-12-29 10:02:01,126: ERROR\tpgadmin:\t'NoneType' object is not subscriptable
+[Tue Dec 29 10:02:01.128684 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] Traceback (most recent call last):
+[Tue Dec 29 10:02:01.128690 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/__init__.py", line 604, in current_user_cleanup
+[Tue Dec 29 10:02:01.128693 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     mdl.on_logout(user)
+[Tue Dec 29 10:02:01.128697 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/tools/datagrid/__init__.py", line 87, in on_logout
+[Tue Dec 29 10:02:01.128701 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     close_query_tool_session(trans_id)
+[Tue Dec 29 10:02:01.128706 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/tools/datagrid/__init__.py", line 482, in close_query_tool_session
+[Tue Dec 29 10:02:01.128710 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     conn.cancel_transaction(cmd_obj.conn_id, cmd_obj.did)
+[Tue Dec 29 10:02:01.128714 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/connection.py", line 1516, in cancel_transaction
+[Tue Dec 29 10:02:01.128718 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     password = decrypt(password, crypt_key)\\
+[Tue Dec 29 10:02:01.128722 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 59, in decrypt
+[Tue Dec 29 10:02:01.128726 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     cipher = Cipher(AES(pad(key)), CFB8(iv), default_backend())
+[Tue Dec 29 10:02:01.128730 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 71, in pad
+[Tue Dec 29 10:02:01.128734 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     key = key[:32]
+[Tue Dec 29 10:02:01.128740 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] TypeError: 'NoneType' object is not subscriptable
+[Tue Dec 29 10:02:01.133031 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] 
+[Tue Dec 29 10:02:01.147825 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] 2020-12-29 10:02:01,137: ERROR\tpgadmin:\t'NoneType' object is not subscriptable
+[Tue Dec 29 10:02:01.147848 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] Traceback (most recent call last):
+[Tue Dec 29 10:02:01.147854 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/lib/python3/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+[Tue Dec 29 10:02:01.147859 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     rv = self.dispatch_request()
+[Tue Dec 29 10:02:01.147864 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/lib/python3/dist-packages/flask/app.py", line 1598, in dispatch_request
+[Tue Dec 29 10:02:01.147869 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     return self.view_functions[rule.endpoint](**req.view_args)
+[Tue Dec 29 10:02:01.147874 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/lib/python3/dist-packages/flask_security/views.py", line 240, in logout
+[Tue Dec 29 10:02:01.147879 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     logout_user()
+[Tue Dec 29 10:02:01.147883 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/lib/python3/dist-packages/flask_security/utils.py", line 169, in logout_user
+[Tue Dec 29 10:02:01.147888 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     _logout_user()
+[Tue Dec 29 10:02:01.147932 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/lib/python3/dist-packages/flask_login/utils.py", line 171, in logout_user
+[Tue Dec 29 10:02:01.147936 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     user_logged_out.send(current_app._get_current_object(), user=user)
+[Tue Dec 29 10:02:01.147941 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/lib/python3/dist-packages/blinker/base.py", line 267, in send
+[Tue Dec 29 10:02:01.147945 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     for receiver in self.receivers_for(sender)]
+[Tue Dec 29 10:02:01.147949 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/lib/python3/dist-packages/blinker/base.py", line 267, in <listcomp>
+[Tue Dec 29 10:02:01.147955 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     for receiver in self.receivers_for(sender)]
+[Tue Dec 29 10:02:01.147960 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/__init__.py", line 609, in current_user_cleanup
+[Tue Dec 29 10:02:01.147966 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     _driver.gc_own()
+[Tue Dec 29 10:02:01.147973 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/__init__.py", line 240, in gc_own
+[Tue Dec 29 10:02:01.147980 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     mgr.release()
+[Tue Dec 29 10:02:01.147986 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/server_manager.py", line 406, in release
+[Tue Dec 29 10:02:01.147991 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     conn.cancel_transaction(conn.conn_id[5:])
+[Tue Dec 29 10:02:01.147999 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/driver/psycopg2/connection.py", line 1516, in cancel_transaction
+[Tue Dec 29 10:02:01.148005 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     password = decrypt(password, crypt_key)\\
+[Tue Dec 29 10:02:01.148011 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 59, in decrypt
+[Tue Dec 29 10:02:01.148017 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     cipher = Cipher(AES(pad(key)), CFB8(iv), default_backend())
+[Tue Dec 29 10:02:01.148024 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]   File "/usr/share/pgadmin4/web/pgadmin/utils/crypto.py", line 71, in pad
+[Tue Dec 29 10:02:01.148030 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135]     key = key[:32]
+[Tue Dec 29 10:02:01.148039 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] TypeError: 'NoneType' object is not subscriptable
+[Tue Dec 29 10:02:01.148052 2020] [wsgi:error] [pid 63319] [remote 195.176.3.24:41135] 
+[Tue Dec 29 15:20:09.525276 2020] [php7:error] [pid 15755] [client 49.234.12.63:60890] script '/var/www/html/elrekt.php' not found or unable to stat
+[Tue Dec 29 22:03:41.862464 2020] [php7:error] [pid 31087] [client 45.155.205.108:53608] script '/var/www/html/index.php' not found or unable to stat
+[Tue Dec 29 22:14:38.470161 2020] [php7:error] [pid 63322] [client 157.42.111.77:64795] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 523
+[Tue Dec 29 22:14:38.470771 2020] [php7:error] [pid 63322] [client 157.42.111.77:64795] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 28672 bytes) in /var/www/html/psc/application/views/errors/html/error_php.php on line 33
+[Tue Dec 29 22:15:20.854093 2020] [php7:error] [pid 31088] [client 157.42.111.77:64802] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 523
+[Tue Dec 29 22:15:20.854652 2020] [php7:error] [pid 31088] [client 157.42.111.77:64802] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 28672 bytes) in /var/www/html/psc/application/views/errors/html/error_php.php on line 33
+[Tue Dec 29 23:08:27.768633 2020] [php7:error] [pid 31087] [client 157.42.111.77:49967] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 523
+[Tue Dec 29 23:08:27.769087 2020] [php7:error] [pid 31087] [client 157.42.111.77:49967] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65536 bytes) in /var/www/html/psc/system/core/Common.php on line 163
+[Tue Dec 29 23:08:27.769376 2020] [php7:error] [pid 31087] [client 157.42.111.77:49967] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65536 bytes) in /var/www/html/psc/system/database/DB_query_builder.php on line 1656
+[Tue Dec 29 23:08:27.769498 2020] [php7:error] [pid 31087] [client 157.42.111.77:49967] PHP Fatal error:  Uncaught Error: Class 'CI_Exceptions' not found in /var/www/html/psc/system/core/Common.php:196\nStack trace:\n#0 /var/www/html/psc/system/core/Common.php(617): load_class('Exceptions', 'core')\n#1 [internal function]: _error_handler(2, 'Unknown: Cannot...', 'Unknown', 0, NULL)\n#2 {main}\n  thrown in /var/www/html/psc/system/core/Common.php on line 196
+[Tue Dec 29 23:08:39.171570 2020] [php7:error] [pid 31058] [client 157.35.255.97:49970] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 523
+[Tue Dec 29 23:08:39.171897 2020] [php7:error] [pid 31058] [client 157.35.255.97:49970] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65536 bytes) in /var/www/html/psc/system/core/Common.php on line 163
+[Tue Dec 29 23:08:44.288241 2020] [php7:error] [pid 31088] [client 157.35.255.97:49971] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 523
+[Tue Dec 29 23:08:44.288601 2020] [php7:error] [pid 31088] [client 157.35.255.97:49971] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 65536 bytes) in /var/www/html/psc/system/core/Common.php on line 163
+[Tue Dec 29 23:11:14.117110 2020] [php7:error] [pid 63322] [client 157.42.111.77:49985] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 524
+[Tue Dec 29 23:11:14.117762 2020] [php7:error] [pid 63322] [client 157.42.111.77:49985] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 16384 bytes) in /var/www/html/psc/application/views/errors/html/error_php.php on line 33
+[Tue Dec 29 23:11:54.767298 2020] [php7:error] [pid 31087] [client 157.35.255.97:49989] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 524
+[Tue Dec 29 23:12:14.010213 2020] [php7:error] [pid 25138] [client 157.42.111.77:49990] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 524
+[Tue Dec 29 23:13:01.487217 2020] [php7:error] [pid 31088] [client 157.42.111.77:49994] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 33554440 bytes) in /var/www/html/psc/application/controllers/Livetrack.php on line 617
+[Tue Dec 29 23:46:05.367694 2020] [php7:notice] [pid 63322] [client 164.52.207.234:24840] PHP Notice:  Undefined variable: lat1 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:05.367771 2020] [php7:notice] [pid 63322] [client 164.52.207.234:24840] PHP Notice:  Undefined variable: lng1 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:05.367776 2020] [php7:notice] [pid 63322] [client 164.52.207.234:24840] PHP Notice:  Undefined variable: lat2 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:05.367794 2020] [php7:notice] [pid 63322] [client 164.52.207.234:24840] PHP Notice:  Undefined variable: lng2 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:05.367965 2020] [php7:error] [pid 63322] [client 164.52.207.234:24840] PHP Fatal error:  Uncaught LogicException: Step must be -ve in /var/www/html/psc/api/getmidpoints.php:62\nStack trace:\n#0 /var/www/html/psc/api/getmidpoints.php(137): xrange(0, 0)\n#1 /var/www/html/psc/api/getmidpoints.php(173): main(1, 0, NULL, NULL, NULL, NULL)\n#2 {main}\n  thrown in /var/www/html/psc/api/getmidpoints.php on line 62
+[Tue Dec 29 23:46:28.123570 2020] [php7:notice] [pid 64615] [client 157.35.255.97:52256] PHP Notice:  Undefined variable: lat1 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:28.123648 2020] [php7:notice] [pid 64615] [client 157.35.255.97:52256] PHP Notice:  Undefined variable: lng1 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:28.123653 2020] [php7:notice] [pid 64615] [client 157.35.255.97:52256] PHP Notice:  Undefined variable: lat2 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:28.123657 2020] [php7:notice] [pid 64615] [client 157.35.255.97:52256] PHP Notice:  Undefined variable: lng2 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:46:28.124129 2020] [php7:error] [pid 64615] [client 157.35.255.97:52256] PHP Fatal error:  Uncaught LogicException: Step must be -ve in /var/www/html/psc/api/getmidpoints.php:62\nStack trace:\n#0 /var/www/html/psc/api/getmidpoints.php(137): xrange(0, 0)\n#1 /var/www/html/psc/api/getmidpoints.php(173): main(1, 0, NULL, NULL, NULL, NULL)\n#2 {main}\n  thrown in /var/www/html/psc/api/getmidpoints.php on line 62
+[Tue Dec 29 23:47:17.390942 2020] [php7:notice] [pid 31083] [client 157.42.111.77:52259] PHP Notice:  Undefined variable: lat1 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:47:17.390999 2020] [php7:notice] [pid 31083] [client 157.42.111.77:52259] PHP Notice:  Undefined variable: lng1 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:47:17.391003 2020] [php7:notice] [pid 31083] [client 157.42.111.77:52259] PHP Notice:  Undefined variable: lat2 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:47:17.391006 2020] [php7:notice] [pid 31083] [client 157.42.111.77:52259] PHP Notice:  Undefined variable: lng2 in /var/www/html/psc/api/getmidpoints.php on line 173
+[Tue Dec 29 23:47:17.391150 2020] [php7:error] [pid 31083] [client 157.42.111.77:52259] PHP Fatal error:  Uncaught LogicException: Step must be -ve in /var/www/html/psc/api/getmidpoints.php:62\nStack trace:\n#0 /var/www/html/psc/api/getmidpoints.php(137): xrange(0, 0)\n#1 /var/www/html/psc/api/getmidpoints.php(173): main(1, 0, NULL, NULL, NULL, NULL)\n#2 {main}\n  thrown in /var/www/html/psc/api/getmidpoints.php on line 62
+[Tue Dec 29 23:48:58.471882 2020] [php7:error] [pid 31088] [client 157.35.255.97:52273] PHP Fatal error:  Uncaught LogicException: Step must be -ve in /var/www/html/psc/api/getmidpoints.php:62\nStack trace:\n#0 /var/www/html/psc/api/getmidpoints.php(137): xrange(0, 0)\n#1 /var/www/html/psc/api/getmidpoints.php(176): main(1, 0, '25.594722', '85.115356', '25.594724', '85.115356')\n#2 {main}\n  thrown in /var/www/html/psc/api/getmidpoints.php on line 62
+[Tue Dec 29 23:52:01.476419 2020] [php7:error] [pid 64615] [client 157.35.255.97:52293] PHP Fatal error:  Uncaught LogicException: Step must be -ve in /var/www/html/psc/api/getmidpoints.php:62\nStack trace:\n#0 /var/www/html/psc/api/getmidpoints.php(137): xrange(0, 0)\n#1 /var/www/html/psc/api/getmidpoints.php(181): main(1, 0, '25.594722', '85.115356', '25.594724', '85.115356')\n#2 {main}\n  thrown in /var/www/html/psc/api/getmidpoints.php on line 62
+[Tue Dec 29 23:52:44.372879 2020] [php7:error] [pid 31083] [client 157.42.111.77:52296] PHP Fatal error:  Uncaught LogicException: Step must be -ve in /var/www/html/psc/api/getmidpoints.php:62\nStack trace:\n#0 /var/www/html/psc/api/getmidpoints.php(137): xrange(0, 0)\n#1 /var/www/html/psc/api/getmidpoints.php(181): main(1, 0, 25.594722, 85.115356, '25.594724', '85.115356')\n#2 {main}\n  thrown in /var/www/html/psc/api/getmidpoints.php on line 62
+[Tue Dec 29 23:53:26.452237 2020] [php7:error] [pid 31038] [client 157.35.255.97:52300] PHP Fatal error:  Uncaught LogicException: Step must be -ve in /var/www/html/psc/api/getmidpoints.php:62\nStack trace:\n#0 /var/www/html/psc/api/getmidpoints.php(137): xrange(0, 0)\n#1 /var/www/html/psc/api/getmidpoints.php(181): main(1, 0, 25.594722, 85.115356, 25.594724, 85.115356)\n#2 {main}\n  thrown in /var/www/html/psc/api/getmidpoints.php on line 62

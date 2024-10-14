@@ -1,0 +1,5 @@
+[{ "HouseId" : 0, "UHouseId" : "PMC0041364", "OwnerName" : "RADHE THAKUR", "Address" : "new CHITAKOD", "WardNo" : "13", "ContactNo" : "9525419841", "PinCode" : "800002", "Lat" : "25.584981666666668" , "Lng" : "85.10541833333333", "IsActive" : 1, "UserId" : "0", "OwnerType" : "1", "PropertyTypeId" : "2", "CircleId" : "2",  "CCode" : "ORG/00001",  "IdentityNo" : "N/A" ,  "IdentityTypeId" : "0",  "CollectionType" : "1",  "SectorId" : 0,  "PropertyId" : "TPID220210304130002" }]{
+  "Result": 1,
+  "Msg": "Data pushed successfully",
+  "Code": ""
+}

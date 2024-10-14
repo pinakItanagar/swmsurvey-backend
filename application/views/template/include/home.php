@@ -1,0 +1,142 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Patna Smart City Limited</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+
+    /* Menu */
+    $(".menu-mobile").click(function() {
+        $(".navigation").slideToggle();
+        return false;
+    });
+
+});
+</script>
+</head>
+
+<body>
+<!-- start header -->
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-5">
+                <!-- start logo -->
+                <div class="logo">
+                    <a href="#" title="Covid19 Control Centre"><img src="images/logo.png" width="195" height="33" alt="Itanagar Smart City - COVID-19 Control Center"> <span>Patna Smart City Limited SWM</span></a>
+                </div>
+                <!-- end logo -->
+            </div>
+            <div class="col-sm-6 col-xs-7 position-static">
+                <!-- start enquiry -->
+                <div class="enquiry">
+                    <p><img src="images/call.svg" width="30" height="30" alt="call">Our Us At: +91-0612-2219180</p>
+                </div>
+                <!-- end enquiry -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end header -->
+<!-- start main-container -->
+<div class="main-container clearfix">
+    <!-- start leftcol -->
+    <div class="leftcol">
+        <!-- start caption -->
+        <div class="caption">
+            <h2>Patna Smart City Limited. </h2>
+            <p>Patna Smart City Limited (PSCL) is a special purpose vehicle incorporated under the Companies Act, 2013. It looks after planning, appraisal, approval, fund releasing, implementation, management, operation, monitoring and evaluation of the Patna Smart City Development projects. </p>
+           
+           
+            <!-- end clients-logo -->
+        </div>
+        <!-- end caption -->
+    </div>
+    <!-- end leftcol -->
+    <!-- start rightcol -->
+    <div class="rightcol">
+        <!-- start login -->
+        <div class="login">
+            <h3>Login</h3>
+            <div class="form">
+                <form action="<?=base_url('home/authorization')?>" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="userID" id="userID" placeholder="Mobile" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="userPassword" id="userPassword" placeholder="Password" class="form-control">
+                        <div class="text-right">
+                          <!--  <a href="forgot-password.php" title="Forgot Password?" class="forgot-link">Forgot Password?</a> -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block">Login</button>
+                    </div>
+                    <!--
+                    <div class="section-divider">
+                        <h5>Maternity Registration</h5>
+                    </div>
+                    <div class="text-center">
+                        <a href="<?=base_url('home/registration')?>" class="btn btn-default btn-block">Register</a>
+                    </div>
+                    -->
+                </form>
+            </div>
+        </div>
+        <!-- end login -->
+    </div>
+    <!-- end rightcol -->
+</div>
+<!-- end main-container -->
+<!-- start footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="txtb">
+                    <p>&copy; 2021 - 2022 , Copyrights, All Rights Reserved Patna Smart City Limited</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="social">
+                    <!--
+                    <ul>
+                        <li><a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="txtb">
+                    <p>This web application software is best viewed in firefox and chrome browsers</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="social">
+                    <!--
+                    <ul>
+                        <li><a href="#" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" title="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end footer -->
+</body>
+</html>

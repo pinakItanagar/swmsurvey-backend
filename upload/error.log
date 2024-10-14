@@ -1,0 +1,2 @@
+[Sun Apr 04 06:25:31.472884 2021] [mpm_prefork:notice] [pid 36636] AH00163: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/3.6 configured -- resuming normal operations
+[Sun Apr 04 06:25:31.472969 2021] [core:notice] [pid 36636] AH00094: Command line: '/usr/sbin/apache2'
